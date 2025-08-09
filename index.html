@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Raksha Bandhan Sampada! ✨</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Satoshi', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Animated mesh gradient background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 20%, #FFD700 0%, transparent 25%),
+                radial-gradient(circle at 80% 80%, #FF6B35 0%, transparent 25%),
+                radial-gradient(circle at 40% 60%, #DC143C 0%, transparent 25%),
+                radial-gradient(circle at 60% 30%, #F7931E 0%, transparent 25%),
+                radial-gradient(circle at 90% 10%, #DAA520 0%, transparent 25%),
+                radial-gradient(circle at 10% 90%, #FF1493 0%, transparent 25%),
+                linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0f3460 100%);
+            animation: meshFlow 15s ease infinite;
+            z-index: -3;
+            filter: blur(40px);
+        }
+
+        @keyframes meshFlow {
+
+            0%,
+            100% {
+                transform: scale(1) rotate(0deg);
+                filter: blur(40px) brightness(0.8);
+            }
+
+            25% {
+                transform: scale(1.1) rotate(90deg);
+                filter: blur(60px) brightness(1.2);
+            }
+
+            50% {
+                transform: scale(1.2) rotate(180deg);
+                filter: blur(80px) brightness(1);
+            }
+
+            75% {
+                transform: scale(1.15) rotate(270deg);
+                filter: blur(50px) brightness(1.1);
+            }
+        }
+
+        /* Floating orbs */
+        .floating-orb {
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -2;
+            filter: blur(3px);
+            animation: orbFloat 20s linear infinite;
+        }
+
+        .orb1 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, transparent 70%);
+            top: 10%;
+            left: -150px;
+            animation-duration: 25s;
+        }
+
+        .orb2 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.4) 0%, transparent 70%);
+            top: 60%;
+            right: -100px;
+            animation-duration: 30s;
+            animation-direction: reverse;
+        }
+
+        .orb3 {
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(220, 20, 60, 0.25) 0%, transparent 70%);
+            bottom: 20%;
+            left: 50%;
+            animation-duration: 35s;
+        }
+
+        @keyframes orbFloat {
+            0% {
+                transform: translateX(0) translateY(0) scale(1);
+            }
+
+            25% {
+                transform: translateX(100px) translateY(-50px) scale(1.1);
+            }
+
+            50% {
+                transform: translateX(-50px) translateY(-100px) scale(0.9);
+            }
+
+            75% {
+                transform: translateX(-100px) translateY(50px) scale(1.05);
+            }
+
+            100% {
+                transform: translateX(0) translateY(0) scale(1);
+            }
+        }
+
+        /* Dynamic particle system */
+        .particle-system {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle-system::before,
+        .particle-system::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, #FFD700, #FF6B35);
+            border-radius: 50%;
+            box-shadow:
+                0 0 10px rgba(255, 215, 0, 0.5),
+                100px 200px 0 rgba(255, 107, 53, 0.3),
+                200px 100px 0 rgba(220, 20, 60, 0.3),
+                300px 300px 0 rgba(247, 147, 30, 0.3),
+                150px 350px 0 rgba(255, 215, 0, 0.2),
+                450px 150px 0 rgba(255, 20, 147, 0.3),
+                350px 50px 0 rgba(255, 215, 0, 0.4),
+                50px 450px 0 rgba(255, 107, 53, 0.2);
+            animation: particleGlow 8s ease-in-out infinite;
+        }
+
+        .particle-system::after {
+            animation-delay: 4s;
+            box-shadow:
+                50px 50px 0 rgba(255, 215, 0, 0.4),
+                250px 150px 0 rgba(255, 107, 53, 0.3),
+                150px 250px 0 rgba(220, 20, 60, 0.3),
+                400px 200px 0 rgba(247, 147, 30, 0.3),
+                300px 400px 0 rgba(255, 215, 0, 0.2),
+                500px 100px 0 rgba(255, 20, 147, 0.3),
+                100px 500px 0 rgba(255, 215, 0, 0.4),
+                200px 300px 0 rgba(255, 107, 53, 0.2);
+        }
+
+        @keyframes particleGlow {
+
+            0%,
+            100% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Animated geometric shapes */
+        .geo-shape {
+            position: fixed;
+            pointer-events: none;
+            z-index: -2;
+            opacity: 0.1;
+        }
+
+        .geo-shape:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #FFD700, #FF6B35);
+            top: 15%;
+            right: 10%;
+            animation: geoRotate 20s linear infinite;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .geo-shape:nth-child(2) {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #DC143C, #F7931E);
+            bottom: 25%;
+            left: 15%;
+            animation: geoRotate 25s linear infinite reverse;
+            border-radius: 50%;
+        }
+
+        .geo-shape:nth-child(3) {
+            width: 120px;
+            height: 60px;
+            background: linear-gradient(45deg, #FF6B35, #FFD700);
+            top: 50%;
+            right: 20%;
+            animation: geoRotate 30s linear infinite;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
+
+        @keyframes geoRotate {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.2);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        /* Modern pattern overlay - now more dynamic */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                conic-gradient(from 0deg at 20% 30%, transparent 0deg, rgba(255, 215, 0, 0.1) 60deg, transparent 120deg),
+                conic-gradient(from 180deg at 80% 70%, transparent 0deg, rgba(255, 107, 53, 0.1) 60deg, transparent 120deg),
+                conic-gradient(from 90deg at 50% 50%, transparent 0deg, rgba(220, 20, 60, 0.08) 60deg, transparent 120deg);
+            animation: conicRotate 40s linear infinite;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        @keyframes conicRotate {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.1);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Floating particles - now festive elements */
+        .particle::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: linear-gradient(45deg, #FFD700, #FF6B35, #DC143C);
+            border-radius: 50%;
+            animation: festiveFloat 12s linear infinite;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Add traditional symbols as particles */
+        .particle:nth-child(3n)::before {
+            content: '🪔';
+            background: none;
+            width: auto;
+            height: auto;
+            font-size: 16px;
+            box-shadow: none;
+        }
+
+        .particle:nth-child(5n)::before {
+            content: '🌸';
+            background: none;
+            width: auto;
+            height: auto;
+            font-size: 14px;
+            box-shadow: none;
+        }
+
+        .particle:nth-child(7n)::before {
+            content: '🪢';
+            background: none;
+            width: auto;
+            height: auto;
+            font-size: 18px;
+            box-shadow: none;
+        }
+
+        @keyframes festiveFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            max-width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hero section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Color options for the title - you can choose any of these! */
+        .hero-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(3rem, 10vw, 9rem);
+            font-weight: 900;
+
+            /* Option 1: Traditional Festive Colors (Current) */
+            background: linear-gradient(135deg, #FFD700 0%, #FF6B35 25%, #DC143C 50%, #F7931E 75%, #FFD700 100%);
+
+            /* Option 2: Royal Purple & Gold - Uncomment to use */
+            /* background: linear-gradient(135deg, #8A2BE2 0%, #FFD700 25%, #9932CC 50%, #FFA500 75%, #8A2BE2 100%); */
+
+            /* Option 3: Sunset Vibes - Uncomment to use */
+            /* background: linear-gradient(135deg, #FF6B6B 0%, #FFE66D 25%, #FF6B6B 50%, #4ECDC4 75%, #FF6B6B 100%); */
+
+            /* Option 4: Ocean Breeze - Uncomment to use */
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #667eea 50%, #f093fb 75%, #667eea 100%); */
+
+            /* Option 5: Forest Green & Gold - Uncomment to use */
+            /* background: linear-gradient(135deg, #2E8B57 0%, #FFD700 25%, #228B22 50%, #FFA500 75%, #2E8B57 100%); */
+
+            /* Option 6: Rose Gold Elegance - Uncomment to use */
+            /* background: linear-gradient(135deg, #E91E63 0%, #F8BBD9 25%, #C2185B 50%, #FFB6C1 75%, #E91E63 100%); */
+
+            /* Option 7: Cosmic Blue - Uncomment to use */
+            /* background: linear-gradient(135deg, #1E3C72 0%, #2A5298 25%, #00C9FF 50%, #92FE9D 75%, #1E3C72 100%); */
+
+            /* Option 8: Warm Autumn - Uncomment to use */
+            /* background: linear-gradient(135deg, #D2691E 0%, #FF4500 25%, #DC143C 50%, #FFD700 75%, #D2691E 100%); */
+
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: modernTextFlow 6s ease infinite;
+            margin-bottom: 30px;
+            line-height: 0.85;
+            letter-spacing: -0.05em;
+            position: relative;
+            text-transform: uppercase;
+            filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.2));
+        }
+
+        .hero-title::before {
+            content: '✨';
+            position: absolute;
+            left: -80px;
+            top: 20%;
+            font-size: 0.3em;
+            animation: modernSparkle 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+        }
+
+        .hero-title::after {
+            content: '✨';
+            position: absolute;
+            right: -80px;
+            bottom: 20%;
+            font-size: 0.3em;
+            animation: modernSparkle 3s ease-in-out infinite 1.5s;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+        }
+
+        @keyframes modernTextFlow {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+                transform: scale(1);
+            }
+
+            33% {
+                background-position: 50% 0%;
+                transform: scale(1.02);
+            }
+
+            66% {
+                background-position: 100% 100%;
+                transform: scale(0.98);
+            }
+        }
+
+        @keyframes modernSparkle {
+
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: scale(1) rotate(0deg);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.5) rotate(180deg);
+            }
+        }
+
+        @keyframes gradientText {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .hero-subtitle {
+            font-family: 'Satoshi', sans-serif;
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            font-weight: 500;
+            opacity: 0.9;
+            margin-bottom: 50px;
+            animation: slideUp 1s ease-out 0.5s both;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.3px;
+            position: relative;
+        }
+
+        /* Color Selector Controls */
+        .color-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 15px;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .color-selector h3 {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        .color-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .color-btn {
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .color-btn:hover {
+            transform: scale(1.1);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .color-btn.active {
+            border-color: #fff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .color-btn-1 {
+            background: linear-gradient(135deg, #FFD700, #FF6B35, #DC143C, #F7931E);
+        }
+
+        .color-btn-2 {
+            background: linear-gradient(135deg, #8A2BE2, #FFD700, #9932CC, #FFA500);
+        }
+
+        .color-btn-3 {
+            background: linear-gradient(135deg, #FF6B6B, #FFE66D, #4ECDC4);
+        }
+
+        .color-btn-4 {
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+        }
+
+        .color-btn-5 {
+            background: linear-gradient(135deg, #2E8B57, #FFD700, #228B22, #FFA500);
+        }
+
+        .color-btn-6 {
+            background: linear-gradient(135deg, #E91E63, #F8BBD9, #C2185B, #FFB6C1);
+        }
+
+        .color-btn-7 {
+            background: linear-gradient(135deg, #1E3C72, #2A5298, #00C9FF, #92FE9D);
+        }
+
+        .color-btn-8 {
+            background: linear-gradient(135deg, #D2691E, #FF4500, #DC143C, #FFD700);
+        }
+
+        /* Modern nickname animation styles */
+        .nickname-enter {
+            animation: nicknameSlideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .nickname-exit {
+            animation: nicknameSlideOut 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes nicknameSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.9);
+                filter: blur(10px);
+            }
+
+            100% {
+                opacity: 0.9;
+                transform: translateY(0) scale(1);
+                filter: blur(0px);
+            }
+        }
+
+        @keyframes nicknameSlideOut {
+            0% {
+                opacity: 0.9;
+                transform: translateY(0) scale(1);
+                filter: blur(0px);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-30px) scale(1.1);
+                filter: blur(10px);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 0.8;
+                transform: translateY(0);
+            }
+        }
+
+        .nicknames-modern {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+            animation: slideUp 1s ease-out 1s both;
+        }
+
+        .nickname-pill {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .nickname-pill:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Photo gallery section */
+        .gallery-section {
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 80px;
+            background: linear-gradient(135deg, #FFD700, #FF6B35, #DC143C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+            position: relative;
+            text-transform: capitalize;
+        }
+
+        .section-title::before {
+            content: '✨ ';
+            position: absolute;
+            left: -50px;
+            color: #FFD700;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        .section-title::after {
+            content: ' ✨';
+            position: absolute;
+            right: -50px;
+            color: #FFD700;
+            animation: sparkle 2s ease-in-out infinite 1s;
+        }
+
+        @keyframes sparkle {
+
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.3);
+            }
+        }
+
+        /* Creative Photo Gallery Layout */
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .photo-card {
+            position: relative;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(220, 20, 60, 0.1));
+            backdrop-filter: blur(20px);
+            border-radius: 32px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(255, 215, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            max-width: 350px;
+        }
+
+        .photo-img-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #222;
+            border-radius: 0;
+            overflow: hidden;
+            margin-bottom: 0;
+            box-shadow: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .photo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+            background: transparent;
+            display: block;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+
+            .photo-card {
+                width: 90vw;
+                max-width: 420px;
+                aspect-ratio: 3/4;
+                margin: 0 auto;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                transform: none !important;
+                border-radius: 32px;
+                overflow: hidden;
+            }
+
+            .photo-img-container {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 3/4;
+                min-height: 0;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0;
+                overflow: hidden;
+            }
+
+            .photo-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto;
+                border-radius: 0;
+            }
+
+            .photo-overlay {
+                background: linear-gradient(transparent, rgba(0, 0, 0, 0.45) 90%);
+                border-radius: 0 0 32px 32px;
+                padding: 8px 8px 10px 8px;
+                text-align: center;
+                box-shadow: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                min-height: unset;
+            }
+
+            .photo-title {
+                font-size: 1rem;
+                font-weight: 600;
+                color: #FFD700;
+                margin-bottom: 2px;
+                letter-spacing: 0.01em;
+                text-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .photo-desc {
+                font-size: 0.95rem;
+                color: #fff;
+                line-height: 1.2;
+                font-weight: 400;
+                padding: 0;
+                text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .hero-title::before,
+            .hero-title::after {
+                font-size: 0.4em;
+            }
+
+            .hero-title::before {
+                left: -50px;
+            }
+
+            .hero-title::after {
+                right: -50px;
+            }
+
+            .color-selector {
+                top: 10px;
+                right: 10px;
+                padding: 10px;
+            }
+
+            .color-options {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .color-btn {
+                width: 30px;
+                height: 30px;
+            }
+
+            .photo-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                padding: 0 6vw;
+            }
+
+            .photo-card:hover {
+                transform: translateY(-10px) scale(1.02) !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-grid {
+                gap: 16px;
+                padding: 0 2vw;
+            }
+
+            .photo-card {
+                max-width: 100%;
+                /* padding removed, handled above */
+            }
+
+            .photo-img {
+                max-height: 100%;
+            }
+        }
+
+        /* Message section */
+        .message-section {
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .message-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(220, 20, 60, 0.05));
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            border-radius: 32px;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.1);
+        }
+
+        .message-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            animation: festiveShimmer 4s infinite;
+        }
+
+        .message-card::after {
+            content: '🪢 🌸 🪔 🌸 🪢';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            opacity: 0.7;
+            animation: festiveSymbolsFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes festiveShimmer {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        @keyframes festiveSymbolsFloat {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        .message-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        .message-signature {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.2rem, 4vw, 1.6rem);
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.01em;
+        }
+
+        /* Celebration button */
+        .celebrate-btn {
+            font-family: 'Poppins', sans-serif;
+            margin: 50px auto;
+            padding: 20px 40px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            letter-spacing: 0.5px;
+        }
+
+        .celebrate-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.4);
+        }
+
+        .celebrate-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .celebrate-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Auto confetti styles */
+        .auto-confetti {
+            animation: autoConfettiCelebration 0.5s ease-out;
+        }
+
+        @keyframes autoConfettiCelebration {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Confetti styles */
+        .confetti-piece {
+            position: fixed;
+            top: -10px;
+            width: 10px;
+            height: 10px;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        /* Confetti styles - now festive colors */
+        .confetti-piece::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FFD700, #FF6B35, #DC143C, #DAA520);
+            animation: festiveConfettiDrop 4s linear forwards;
+            border-radius: 3px;
+        }
+
+        /* Add traditional symbols to confetti */
+        .confetti-piece:nth-child(3n)::before {
+            content: '🪔';
+            background: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .confetti-piece:nth-child(5n)::before {
+            content: '🌸';
+            background: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .confetti-piece:nth-child(7n)::before {
+            content: '🪢';
+            background: none;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes festiveConfettiDrop {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .gallery-section {
+                padding: 60px 20px;
+            }
+
+            .message-section {
+                padding: 60px 20px;
+            }
+
+            .message-card {
+                padding: 40px 30px;
+            }
+
+            .photo-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* Scroll animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-animation"></div>
+
+    <!-- Color Selector -->
+    <!-- <div class="color-selector">
+        <h3>Choose Colors ✨</h3>
+        <div class="color-options">
+            <div class="color-btn color-btn-1 active" onclick="changeColors(1)"></div>
+            <div class="color-btn color-btn-2" onclick="changeColors(2)"></div>
+            <div class="color-btn color-btn-3" onclick="changeColors(3)"></div>
+            <div class="color-btn color-btn-4" onclick="changeColors(4)"></div>
+            <div class="color-btn color-btn-5" onclick="changeColors(5)"></div>
+            <div class="color-btn color-btn-6" onclick="changeColors(6)"></div>
+            <div class="color-btn color-btn-7" onclick="changeColors(7)"></div>
+            <div class="color-btn color-btn-8" onclick="changeColors(8)"></div>
+        </div>
+    </div> -->
+
+    <!-- Floating Orbs -->
+    <div class="floating-orb orb1"></div>
+    <div class="floating-orb orb2"></div>
+    <div class="floating-orb orb3"></div>
+
+    <!-- Particle System -->
+    <div class="particle-system"></div>
+
+    <!-- Geometric Shapes -->
+    <div class="geo-shape"></div>
+    <div class="geo-shape"></div>
+    <div class="geo-shape"></div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-title" id="mainHeroTitle">Happy Raksha Bandhan</h1>
+            <p class="hero-subtitle" id="dynamicSubtitle">To my incredible sister Sampada ✨</p>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="gallery-section">
+            <h2 class="section-title animate-on-scroll">Our Beautiful Memories</h2>
+            <div class="photo-grid">
+                <div class="photo-card animate-on-scroll">
+                    <div class="photo-placeholder">
+                        <div class="photo-img-container">
+                            <img src="images/memory1.png" alt="Memory 1" class="photo-img" />
+                        </div>
+                    </div>
+                    <div class="photo-overlay">
+                        <div class="photo-title">Koradi Mandir</div>
+                        <div class="photo-desc">Those were the days! 💫</div>
+                    </div>
+                </div>
+
+                <div class="photo-card animate-on-scroll">
+                    <div class="photo-placeholder">
+                        <div class="photo-img-container">
+                            <img src="images/memory2.png" alt="Memory 2" class="photo-img" />
+                        </div>
+                    </div>
+                    <div class="photo-overlay">
+                        <div class="photo-title">Sister Goals</div>
+                        <div class="photo-desc">Always having each other's back! 💪</div>
+                    </div>
+                </div>
+
+                <div class="photo-card animate-on-scroll">
+                    <div class="photo-placeholder">
+                        <div class="photo-img-container">
+                            <img src="images/memory3.png" alt="Memory 3" class="photo-img" />
+                        </div>
+                    </div>
+                    <div class="photo-overlay">
+                        <div class="photo-title">Fun Times</div>
+                        <div class="photo-desc">Laughter and joy everywhere! 😄</div>
+                    </div>
+                </div>
+
+                <div class="photo-card animate-on-scroll">
+                    <div class="photo-placeholder">
+                        <div class="photo-img-container">
+                            <img src="images/memory4.png" alt="Memory 4" class="photo-img" />
+                        </div>
+                    </div>
+                    <div class="photo-overlay">
+                        <div class="photo-title">Traditional Day</div>
+                        <div class="photo-desc">Making memories together! ✨</div>
+                    </div>
+                </div>
+
+                <div class="photo-card animate-on-scroll">
+                    <div class="photo-placeholder">
+                        <div class="photo-img-container">
+                            <img src="images/memory5.png" alt="Memory 4" class="photo-img" />
+                        </div>
+                    </div>
+                    <div class="photo-overlay">
+                        <div class="photo-title">Diwali 2024</div>
+                        <div class="photo-desc">Celebrating together! ✨</div>
+                    </div>
+                </div>
+
+                <div class="photo-card animate-on-scroll">
+                    <div class="photo-placeholder">
+                        <div class="photo-img-container">
+                            <img src="images/memory6.png" alt="Memory 4" class="photo-img" />
+                        </div>
+                    </div>
+                    <div class="photo-overlay">
+                        <div class="photo-title">Music Concert</div>
+                        <div class="photo-desc">Besura pan! ✨</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section class="message-section">
+            <div class="message-card animate-on-scroll">
+                <div class="message-text">
+                    Dear Sampada (my favorite Pizza, sweetest Rasgulla, and cutest Motuu! 😍),
+                    <br><br>
+                    On this special Raksha Bandhan, I want to celebrate not just our bond, but the amazing person you
+                    are. You bring so much light, laughter, and love into my life whenever am around you.
+                    <br><br>
+                    From early office days to late night development adventures, every moment with you has been a
+                    treasure. I'm so
+                    proud to call you my sister and so grateful for all the joy you bring.
+                    <br><br>
+                    Here's to many more years of inside jokes, shared secrets, endless support, and unconditional love!
+                    💕
+                </div>
+                <div class="message-signature">
+                    With infinite love,<br>Your protective sibling 🛡️💖
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // ...existing code...
+        // Color scheme definitions
+        const colorSchemes = {
+            1: 'linear-gradient(135deg, #FFD700 0%, #FF6B35 25%, #DC143C 50%, #F7931E 75%, #FFD700 100%)',
+            2: 'linear-gradient(135deg, #8A2BE2 0%, #FFD700 25%, #9932CC 50%, #FFA500 75%, #8A2BE2 100%)',
+            3: 'linear-gradient(135deg, #FF6B6B 0%, #FFE66D 25%, #FF6B6B 50%, #4ECDC4 75%, #FF6B6B 100%)',
+            4: 'linear-gradient(135deg, #667eea 0%, #764ba2 25%, #667eea 50%, #f093fb 75%, #667eea 100%)',
+            5: 'linear-gradient(135deg, #2E8B57 0%, #FFD700 25%, #228B22 50%, #FFA500 75%, #2E8B57 100%)',
+            6: 'linear-gradient(135deg, #E91E63 0%, #F8BBD9 25%, #C2185B 50%, #FFB6C1 75%, #E91E63 100%)',
+            7: 'linear-gradient(135deg, #1E3C72 0%, #2A5298 25%, #00C9FF 50%, #92FE9D 75%, #1E3C72 100%)',
+            8: 'linear-gradient(135deg, #D2691E 0%, #FF4500 25%, #DC143C 50%, #FFD700 75%, #D2691E 100%)'
+        };
+
+        // Function to change colors
+        function changeColors(scheme) {
+            const title = document.getElementById('mainHeroTitle');
+            if (!title) return;
+            title.style.background = colorSchemes[scheme];
+            title.style.backgroundSize = '300% 300%';
+            title.style.webkitBackgroundClip = 'text';
+            title.style.webkitTextFillColor = 'transparent';
+            title.style.backgroundClip = 'text';
+
+            // Update active button
+            document.querySelectorAll('.color-btn').forEach(btn => btn.classList.remove('active'));
+            const btn = document.querySelector(`.color-btn-${scheme}`);
+            if (btn) btn.classList.add('active');
+
+            // Add animation effect
+            title.style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                title.style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        // Create floating particles - now with festive elements
+        function createParticles() {
+            for (let i = 0; i < 25; i++) {
+                setTimeout(() => {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 12 + 's';
+                    particle.style.animationDuration = (Math.random() * 8 + 6) + 's';
+                    document.body.appendChild(particle);
+
+                    setTimeout(() => {
+                        if (particle.parentNode) {
+                            particle.remove();
+                        }
+                    }, 12000);
+                }, i * 300);
+            }
+        }
+
+        // Create festive confetti burst
+        function createConfetti() {
+            for (let i = 0; i < 120; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti-piece';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = ['#FFD700', '#FF6B35', '#DC143C', '#DAA520'][Math.floor(Math.random() * 4)];
+                    confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                    confetti.style.animationDuration = (Math.random() * 2 + 3) + 's';
+                    document.body.appendChild(confetti);
+
+                    setTimeout(() => {
+                        if (confetti.parentNode) {
+                            confetti.remove();
+                        }
+                    }, 5000);
+                }, i * 15);
+            }
+        }
+
+        // Celebration function - now for auto-confetti
+        function celebrate() {
+            createConfetti();
+
+            // Animate nickname pills
+            document.querySelectorAll('.nickname-pill').forEach((pill, index) => {
+                setTimeout(() => {
+                    pill.style.transform = 'translateY(-20px) scale(1.1) rotate(10deg)';
+                    setTimeout(() => {
+                        pill.style.transform = '';
+                    }, 500);
+                }, index * 100);
+            });
+
+            // Animate photo cards
+            document.querySelectorAll('.photo-card').forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.transform = card.style.transform.replace(/scale\([^)]*\)/, '') + ' scale(1.05)';
+                    setTimeout(() => {
+                        // Reset to original transform
+                        const originalTransform = card.style.transform.replace(/scale\([^)]*\)\s?/, '');
+                        card.style.transform = originalTransform;
+                    }, 600);
+                }, index * 150);
+            });
+
+            // Add celebration effect to title
+            const title = document.querySelector('.hero-title');
+            title.classList.add('auto-confetti');
+            setTimeout(() => {
+                title.classList.remove('auto-confetti');
+            }, 500);
+        }
+
+        // Auto-confetti every 5 seconds
+        function startAutoConfetti() {
+            celebrate(); // Initial celebration
+            setInterval(() => {
+                celebrate();
+            }, 5000);
+        }
+
+        // Scroll animations
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+
+        // Dynamic nickname cycling with modern animation
+        function cycleNicknames() {
+            const nicknames = [
+                "To my incredible sister Sampada ✨",
+                "To my amazing Sampadaaaa 💖",
+                "To my favorite Pizza 🍕",
+                "To my sweetest Rasgulla 🍯",
+                "To my cutest Motuu 🤗"
+            ];
+
+            let currentIndex = 0;
+            const subtitle = document.getElementById('dynamicSubtitle');
+
+            function updateNickname() {
+                // Add exit animation class
+                subtitle.classList.add('nickname-exit');
+
+                setTimeout(() => {
+                    subtitle.textContent = nicknames[currentIndex];
+                    subtitle.classList.remove('nickname-exit');
+                    subtitle.classList.add('nickname-enter');
+
+                    setTimeout(() => {
+                        subtitle.classList.remove('nickname-enter');
+                    }, 800);
+
+                    currentIndex = (currentIndex + 1) % nicknames.length;
+                }, 400);
+            }
+
+            // Start cycling after initial load
+            setTimeout(() => {
+                setInterval(updateNickname, 3000);
+            }, 3000);
+        }
+
+        // Initialize
+        let colorInterval = 1;
+        function startAutoColorChange() {
+            setInterval(() => {
+                changeColors(colorInterval);
+                colorInterval = colorInterval % 8 + 1;
+            }, 5000);
+        }
+
+        window.addEventListener('load', () => {
+            createParticles();
+            animateOnScroll();
+            cycleNicknames();
+            startAutoConfetti(); // Start automatic confetti celebrations
+            setInterval(createParticles, 12000); // Refresh particles
+            startAutoColorChange();
+
+            // Continuous slow scroll down after 3 seconds, and after user scrolls up (with 5s delay)
+            let scrollInterval = null;
+            let scrollTimeout = null;
+
+            function startContinuousScroll(delay = 0) {
+                if (scrollInterval) clearInterval(scrollInterval);
+                if (scrollTimeout) clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    scrollInterval = setInterval(() => {
+                        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
+                            clearInterval(scrollInterval);
+                            scrollInterval = null;
+                            return;
+                        }
+                        window.scrollBy(0, 1);
+                    }, 10);
+                }, delay);
+            }
+
+            // Start initial scroll after 3s
+            startContinuousScroll(3000);
+
+            // Listen for user scroll up, then restart scroll after 5s
+            let lastScrollY = window.scrollY;
+            window.addEventListener('scroll', () => {
+                // If user scrolls up
+                if (window.scrollY < lastScrollY) {
+                    if (scrollInterval) {
+                        clearInterval(scrollInterval);
+                        scrollInterval = null;
+                    }
+                    if (scrollTimeout) {
+                        clearTimeout(scrollTimeout);
+                        scrollTimeout = null;
+                    }
+                    startContinuousScroll(5000);
+                }
+                lastScrollY = window.scrollY;
+                animateOnScroll();
+            });
+        });
+
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Add click effects to nickname pills
+        document.querySelectorAll('.nickname-pill').forEach(pill => {
+            pill.addEventListener('click', () => {
+                pill.style.background = 'rgba(255, 107, 107, 0.3)';
+                setTimeout(() => {
+                    pill.style.background = '';
+                }, 300);
+            });
+        });
+
+        // Photo card interactions
+        document.querySelectorAll('.photo-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.style.transform = 'scale(1.1) rotate(5deg)';
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 400);
+            });
+        });
+    </script>
+</body>
+
+</html>
